@@ -1,0 +1,7 @@
+**/dist/
+**/coverage/
+**/node_modules/
+**/.agcontext/
+package-lock.json
+CHANGELOG.md
+packages/agcontext/tests/fixtures/

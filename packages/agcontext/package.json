@@ -1,0 +1,76 @@
+{
+  "name": "@eonio/agcontext",
+  "version": "0.1.0",
+  "description": "Augmented Context — a context engineering harness for AI coding agents. Code graphs, hybrid retrieval, repository compression, multi-signal ranking, and token-aware context assembly.",
+  "keywords": [
+    "ai",
+    "agents",
+    "context",
+    "context-engineering",
+    "code-graph",
+    "retrieval",
+    "hybrid-search",
+    "bm25",
+    "embeddings",
+    "claude",
+    "copilot",
+    "cursor",
+    "llm",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "author": "eonio <eonio.junior@gmail.com>",
+  "homepage": "https://github.com/eonio/agcontext#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eonio/agcontext.git",
+    "directory": "packages/agcontext"
+  },
+  "bugs": {
+    "url": "https://github.com/eonio/agcontext/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "agc": "./dist/cli/main.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "npm run build && vitest run --config vitest.e2e.config.ts",
+    "bench": "vitest bench --run",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "ignore": "^7.0.0",
+    "jiti": "^2.4.0",
+    "picocolors": "^1.1.0",
+    "typescript": "^5.6.0",
+    "zod": "^4.0.0"
+  }
+}
