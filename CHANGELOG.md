@@ -1,3 +1,10 @@
+# 1.0.0 (2026-08-22)
+
+
+### Features
+
+* initial release ([834e8a5](https://github.com/eonio/agcontext/commit/834e8a5743c255cfee1259b3afeea8d8254ec783))
+
 # Changelog
 
 All notable changes to this project are documented in this file. The format
