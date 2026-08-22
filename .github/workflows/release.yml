@@ -48,9 +48,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # npm auth uses trusted publishing (OIDC): the workflow's id-token is
+      # exchanged with the registry — no NPM_TOKEN secret involved.
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: "true"
         run: npx semantic-release
