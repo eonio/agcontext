@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/eonio/agcontext/compare/v1.0.0...v1.0.1) (2026-08-22)
+
+
+### Bug Fixes
+
+* verify tokenless publishing via npm trusted publishing ([c4d2834](https://github.com/eonio/agcontext/commit/c4d2834b462672b6aadd7725e027021a10a689f7))
+
 # 1.0.0 (2026-08-22)
 
 

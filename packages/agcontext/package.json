@@ -1,6 +1,6 @@
 {
   "name": "@eonio/agcontext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Augmented Context — a context engineering harness for AI coding agents. Code graphs, hybrid retrieval, repository compression, multi-signal ranking, and token-aware context assembly.",
   "keywords": [
     "ai",
